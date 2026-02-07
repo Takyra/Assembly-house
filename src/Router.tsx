@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { routPaths } from 'constants/routs';
 
@@ -12,15 +12,17 @@ import ElectricitySupplyPage from 'pages/ElectricitySupply';
 import InstallationWorksPage from 'pages/InstallationWorks';
 
 const Router = () => (
-  <Routes>
-    <Route path={routPaths.home} element={<HomePage />} />
-    <Route path={routPaths.designing} element={<DesigningPage />} />
-    <Route path={routPaths.documentation} element={<DocumentationPage />} />
-    <Route path={routPaths.fireSafety} element={<FireSafetyPage />} />
-    <Route path={routPaths.securitySystems} element={<SecuritySystemsPage />} />
-    <Route path={routPaths.electricitySupply} element={<ElectricitySupplyPage />} />
-    <Route path={routPaths.installationWorks} element={<InstallationWorksPage />} />
-  </Routes>
+  <BrowserRouter basename="/Assembly-house/">
+      <Routes>
+        <Route path={routPaths.home} element={<HomePage />} />
+        <Route path={routPaths.designing} element={<DesigningPage />} />
+        <Route path={routPaths.documentation} element={<DocumentationPage />} />
+        <Route path={routPaths.fireSafety} element={<FireSafetyPage />} />
+        <Route path={routPaths.securitySystems} element={<SecuritySystemsPage />} />
+        <Route path={routPaths.electricitySupply} element={<ElectricitySupplyPage />} />
+        <Route path={routPaths.installationWorks} element={<InstallationWorksPage />} />
+      </Routes>
+  </BrowserRouter>
 );
 
 export default Router;
