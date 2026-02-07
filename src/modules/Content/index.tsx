@@ -11,9 +11,13 @@ const Content: FC<IProps> = ({ children }) => {
   const [otherHeight, setOtherHeight] = useState(0);
 
   const getHeightElements = () => {
-    const headerHeight = document.getElementById('header').offsetHeight;
-    const navigationHeight = document.getElementById('navigation').offsetHeight;
-    const footerHeight = document.getElementById('footer').offsetHeight;
+    const header = document.getElementById('header');
+    const navigation = document.getElementById('navigation');
+    const footer = document.getElementById('footer');
+
+    const headerHeight = header ? header.offsetHeight : 0;
+    const navigationHeight = navigation ? navigation.offsetHeight : 0;
+    const footerHeight = footer ? footer.offsetHeight : 0;
 
     setOtherHeight(headerHeight + navigationHeight + footerHeight);
   };

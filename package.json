@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "assembly-house",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^3.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.12.0"
   },
   "devDependencies": {

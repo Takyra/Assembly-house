@@ -1,5 +1,6 @@
 import React, { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Header from './modules/Header';
 import Navigation from './modules/Navigation';
@@ -12,6 +13,9 @@ import './app.scss';
 const App = () => (
   <StrictMode>
     <BrowserRouter basename={import.meta.env.PROD ? '/Assembly-house/' : '/'}>
+      <Helmet>
+        <title>Монтажный дом</title>
+      </Helmet>
       <Header />
       <Navigation />
       <Content>
