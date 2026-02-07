@@ -1,0 +1,41 @@
+.domino {
+  display: flex;
+  min-height: 400px;
+  margin-bottom: 60px;
+
+  &--left {
+    .domino__content {
+      order: -1;
+    }
+  }
+
+  &__image {
+    position: relative;
+    flex: 1 1 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 50%;
+    color: #232323;
+    padding: 30px 60px;
+    box-sizing: border-box;
+  }
+
+  a,
+  button {
+    max-width: 50%;
+
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}

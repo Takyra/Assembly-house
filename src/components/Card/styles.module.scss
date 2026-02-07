@@ -1,0 +1,33 @@
+.card {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f0f0f0 0%, #fef6f8 50%, #fbead6 100%);
+  height: 240px;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &:hover {
+    background: linear-gradient(145deg, #fbead6 0%, #fef6f8 50%, #f0f0f0 100%);
+  }
+
+  &__content {
+    max-width: 66%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 50%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 1032px) {
+    &__image {
+      top: inherit;
+      bottom: 0;
+    }
+  }
+}

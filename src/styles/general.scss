@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../public/fonts/Gilroy-Light.woff2') format('woff2'),
+       url('../../public/fonts/Gilroy-Light.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../public/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+       url('../../public/fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.4;
+  color: #707070;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

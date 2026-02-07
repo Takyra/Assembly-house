@@ -1,0 +1,94 @@
+.header {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 20px 0;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color .2s linear;
+
+    &:hover {
+      &:not(.header__whatsapp) {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 14px;
+    max-width: var(--width-content);
+    padding: 0 14px;
+    margin: 0 auto;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    row-gap: 4px;
+
+    &--address {
+      display: flex;
+      justify-content: end;
+      flex-direction: row;
+    }
+
+    &:nth-child(1) {
+      flex-grow: 4;
+    }
+
+    &:not(&:nth-child(1)) {
+      text-align: end;
+    }
+  }
+
+  &__logo {
+    margin: 10px 0;
+  }
+
+  &__address {
+    line-height: 17px;
+    max-width: 130px;
+  }
+
+  &__iconPoint {
+    margin-right: 10px;
+
+    path {
+      fill: var(--secondary-color);
+    }
+  }
+
+  &__phone {
+    font-size: 16px;
+  }
+
+  &__whatsapp {
+    @keyframes color-change {
+      0% {
+        color: #40efd3;
+      }
+      20% {
+        color: #1ebea5;
+      }
+      40% {
+        color: #3b756c;
+      }
+      60% {
+        color: #1ebea5;
+      }
+      80% {
+        color: #40efd3;
+      }
+      100% {
+        color: #3b756c;
+      }
+    }
+
+    animation: color-change 2.5s infinite;
+  }
+}

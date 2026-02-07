@@ -1,0 +1,46 @@
+.navigation {
+  background: linear-gradient(145deg, #f0f0f0 0%, #edeefb 50%, #fbead6 100%);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    max-width: var(--width-content);
+    height: 50px;
+    padding: 0 14px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #e61c46;
+      transition: width .3s ease-out;
+      width: 0;
+      height: 4px;
+    }
+
+    &:hover{
+      &::before {
+        width: 100%;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      text-decoration: none;
+      height: 100%;
+    }
+  }
+}

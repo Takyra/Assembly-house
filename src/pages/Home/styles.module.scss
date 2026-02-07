@@ -1,0 +1,52 @@
+.welcome {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 470px;
+    width: 50%;
+  }
+
+  &__image {
+    max-width: 50%;
+    max-height: 500px;
+    z-index: -2;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+  gap: 10px;
+  margin-bottom: 60px;
+
+  &__description {
+    line-height: 20px;
+    margin-bottom: 30px;
+
+    & > span {
+      font-weight: 900;
+      color: #e61c46;
+    }
+  }
+
+  &__button {
+    width: 136px;
+    height: 34px;
+  }
+
+  @media screen and (max-width: 752px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(25% - 10px), 1fr));
+  gap: 10px;
+  margin-bottom: 90px;
+}
